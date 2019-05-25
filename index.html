@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NLP</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section><h1>NLP (overview)</h1></section>
+					<section>
+						<ul>
+							<li>The history</li>
+							<li class="fragment">Applications</li>
+							<li class="fragment">Techniques</li>
+							<li class="fragment">Problems</li>
+						</ul>
+						<aside class="notes">
+							<p>When I end up with this presentation, I realized that is's more like language class than a programmer thing.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>What is NLP?</h2>
+
+					<aside class="notes">
+						<p>TO BE BRIEF, it is a technology used to aid computers to understand the human’s natural language and process it, to get computers closer to a human-level understanding of language.</p>
+					</aside>
+				</section>
+
+				<section>
+					<section> <h2>History</h2> </section>
+					<section>
+						<p>1950 - Alan Turing test</p>
+						<img src="./assets/imgs/alan.jpg" alt="Alan Turing Test">
+						<aside class="notes">
+							<p>The history of NLP started in  1950s, when Alan Turing published an article titled "Intelligence" which proposed what is now called the Turing test as a criterion of intelligence.</p>
+							<p>It is a test of a machine's ability to exhibit intelligent behaviour equivalent to, or indistinguishable from, that of a human.</p>
+							<p>During the 1960-1970 some successful NLP systems were developed. It’s time for random facts about them: </p>
+						</aside>
+					</section>
+					<section>
+						<p>1966 - ELIZA</p>
+						<img src="./assets/imgs/eliza.jpg" alt="">
+						<aside class="notes">Its most famous script was DOCTOR, a simulation of a Rogerian psychotherapist. The program had only to reflect back the patient's statements and ask non-directional questions.</aside>
+					</section>
+					<section>
+						<p>1970 - SHRDLU (ETAOIN SHRDLU) </p>
+						<aside class = "notes">The name of this system consists 6 of 12 most frequently used letters.</aside>
+					</section>
+					<section>
+						<p>Chatterbots</p>
+						<p class="fragment">1980s - revolution! Machine learning algorithms!</p>
+						<aside class="notes">
+							<p> Programmers began to write programs which structured real-world information into computer-understandable data (many chatterbots were written); </p>
+							<p> Up to the 1980s, most NLP systems were based on complex sets of hand-written rules. And there was a REVOLUTION in this area when machine learning algorithms for language processing were introduced. </p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section> <h2>What is NLP used for?</h2> </section>
+					<section>
+						<h3>Sentiment analysis</h3>
+						<p> Extracting affective states and subjective information.</p>
+						<p> 
+							<span class = "bold">Example:</span>
+							<span>I say that I <span class="fragment highlight-red">really like</span> pasta!</span>
+						</p>
+						<aside class = "notes">
+							It’s used for extracting affective states and subjective information.
+							Simple Example: I say that I really like pasta!. And machine understands my attitude to this.
+						</aside>
+					</section>
+					<section>
+						<h3>Chatbotters</h3>
+						<p><span class = "bold">Example:</span><span> customer chat services</span></p>
+						<aside class = "notes">
+							It’s 2pm and you suddenly find yourself on the bank website talking with a robot. Well… Next point.
+						</aside>
+					</section>
+					<section>
+						<h3>speech recognition</h3>
+						<p><span class = "bold">Example:</span><span> siri, google assistant, CORTANA</span></p>
+						<aside class = "notes">
+							We all know our phone-helpers, such are:... All of them use speech recognition.
+						</aside>
+					</section>
+					<section>
+						<h3>Machine translation</h3>
+						<p><span class = "bold">Example:</span><span> Google translator, yandex-translator, etc.</span></p>
+						<aside class = "notes">
+							It translates data from one language to another in real time. Ex: We all know Google translator, yandex-translator and so on.
+						</aside>			
+					</section>
+					<section>
+						<h3>Spell checking</h3>
+						<aside class = "notes">
+							<p>How does it work?</p>
+							<p>The language model estimates how likely a given word `c` is in the language for which the spell checker is designed and used.</p>
+						</aside>			
+					</section>
+					<section>
+						<h3>keyword searching</h3>
+						<img src="./assets/imgs/keyword.jpg" alt="Keyword searcging">
+						<aside class = "notes">
+							We use it when we want to find a proper information and article for our PRESENTATION task. Also it helps to categorize the article into the relevant subject.
+						</aside>			
+					</section>
+					<section>
+						<h3>information extraction</h3>
+						<p>
+							<span class = "bold">Example:</span>
+							<span> <span class="fragment grow highlight-green">PERSON</span> works for <span class="fragment grow highlight-current-blue">ORGANIZATION</span> </span>
+						</p>
+						<aside class = "notes">
+							<p>Information extraction (from any text, document or website)</p>
+							<p>For example, we can extract relashionship between a person and organization. We have a sentence PERSON works for ORGANIZATION and understand everything.</p>
+						</aside>			
+					</section>
+					<section>
+						<h3>Advertisement matching</h3>
+						<aside class = "notes">
+							<p>The last but not the least is advertisement matching</p>
+							<p>It’s a recommendation of ads based on your history;</p>
+							<p>You’ve googled about lamps and now you find the ads of LAMPS EVERYWHERE while surfing the Internet.</p>
+						</aside>			
+					</section>			
+				</section>
+
+				<section>
+					<section>
+						<h2>Techniques</h2>
+						<table class="fragment">
+							<thead>
+								<tr>
+									<th>syntactic analysis</th>
+									<th>semantic analysis</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>grammatical rules</td>
+									<td>meaning and interpretation</td>
+								</tr>
+							</tbody>
+						</table>
+						<aside class="notes">
+							<h3>What are the techniques used in NLP?</h3>
+							<p>Two main techniques are used: syntactic analysis and semantic analysis.</p>
+							<p>The 1st is used for understanding how the natural language aligns with the grammatical rules. </p>
+							<p>The 2nd is used to understand the meaning and interpretation of words and how sentences are structured.</p>
+						</aside>					
+					</section>					
+				</section>
+
+				<section>
+					<section>
+						<h3>Syntax techniques</h3>
+					</section>
+					<section>
+						<h3>Tokenization</h3>
+						<p> Breaking up a text into smaller pieces </p>
+						<aside class = "notes">
+							It is the act of breaking up a text into pieces such as phrases, words, symbols and other elements, which are called tokens.
+						</aside>
+					</section>
+					<section>
+						<h3>Lemmatization</h3>
+						<p> Reducing inflected forms of a word into a single form (lemma)</p>
+						<p class = "bold fragment">Examples:</p>
+						<p class = "fragment"> better &rarr; good </p>
+						<p class = "fragment"> go, gone, going &rarr; go </p>
+						<aside class = "notes">
+							<p> It’s a process of reducing the various inflected forms of a word into a single form (which is called lemma). It’s used for easier analysis. </p>
+							<p> To use this technique  it is necessary to have detailed dictionaries which the algorithm can look through to link the form back to its lemma. </p>
+						</aside>
+					</section>
+					<section>
+						<h3>Stemming</h3>
+						<p>Reducing the inflected words to their root form</p>
+						<aside class = "notes">
+							<p> It is the process of reducing the inflected words to their root form. Developing a stemmer is far simpler than building a lemmatizer.</p>
+							<p>If we compare this technique with the previous one, we understnd that is's much easier to develop a stemmer than build a lemmatizer.</p>
+						</aside>
+					</section>
+					<section>
+						<h3>Morphological segmentation</h3>
+						<img src="./assets/imgs/morphemes.png" alt="morphemes">
+						<aside class = "notes">
+							It involves dividing words into individual units called morphemes.
+						</aside>
+					</section>
+					<section>
+						<h3>POS-tags</h3>
+						<div class="fragment">
+							<p> “In our last meeting" - noun  </p>
+							<p> "We are meeting again tomorrow” - verb </p>
+						</div>
+						<aside class = "notes">
+							<p> POS-tags or Part-of-speech tagging. It’s identifying the part of speech for every word. </p>
+							<p> Here we can find a problem. The word can have more than one part of speech. It depends on the context. That’s why we should use the semantic techniques too. </p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>semantic techniques</h3>
+					</section>
+					<section>
+						<h3>Named entity recognition (NER)</h3>
+						<div>
+							<p class="bold"> Examples of groups: persons, locations, organizations, medical codes, etc.</p>
+						</div>
+						<aside class="notes">
+							<p>It’s the process of determining the parts of a text that can be categorized into certain groups.</p>
+							<p> Ex of groups are: persons, locations, organizations, medical codes, etc. </p>
+							<p> As you can see, this technique is related with information extraction application of NLP. </p>
+						</aside>
+					</section>
+					<section>
+						<h3> Word sense disambiguation </h3>
+						<div class = "fragment">
+							<p>Is Washington a man or a state?</p>
+							<img src="./assets/imgs/Washington.png" alt="Washington">
+						</div>
+						<aside class="notes">
+							<p> It involves giving meaning to a word based on the context. </p>
+							<p> Is Washington a man or a state? Or maybe a city on the other side of the continent? </p>
+						</aside>
+					</section>
+					<section>
+						<h3>Chunking</h3>
+						<p class="fragment"> <span class="bold"> "South Africa" </span> > "South" + "Africa" </p>
+						<aside class="notes">
+								<p> There is the same term in cognitive psychology and (surprisingly) it means the same. </p>
+								<p> It’s a process of taking individual () pieces of information and grouping them into bigger. </p>
+								<p> It’s better to use the phrase “South Africa” as a single word instead of two separate words - ‘South’ and ‘Africa’. </p>
+							</aside>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Problems</h3>
+					</section>
+					<section>
+						<ul>
+							<li>Diversity</li>
+							<li class="fragment">Productivity</li>
+							<li class="fragment">Ambiguity</li>
+						</ul>
+						<aside class="notes">
+							<p>Many different styles of language. MOREOVER -  more than 7000 different languages exist.</p>
+							<p>Language is productive. It means that new words appear all the time.</p>
+							<p>Ambiguity at all levels. We can handle it with the help of Probability.</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Conclusion</h3>
+					</section>
+					<section>
+						<h2 class="fragment">Language is hard.</h2>
+						<h2 class="fragment">Language is interesting.</h2>
+						<h2 class="fragment">NLP is interdisciplinary.</h2>
+						<aside class="notes">
+							<p>People from different professions make treasure in its development.</p>
+							<ul>
+								<li>mathematics/machine learning/CS theory</li>
+								<li>cognitive science</li>
+								<li>engineering</li>
+								<li>linguistics</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
